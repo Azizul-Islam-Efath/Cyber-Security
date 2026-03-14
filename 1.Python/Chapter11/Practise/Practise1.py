@@ -1,1 +1,31 @@
+''''
+Q:
+Create a class 2D class and se it to create other class representing a 3D vector
 
+'''
+
+
+
+
+class TwoDVector:
+    def __init__(self,i,j):
+        self.i=i
+        self.j=j
+
+    def show(self):
+        print(f"The 2D Vactor is : {self.i}i+{self.j}j")
+
+class ThreeDVector(TwoDVector):
+    def __init__(self,i,j,k):
+        super().__init__(i,j)
+        self.k=k
+
+    def show(self):
+        print(f"The 3D Vactor is : {self.i}i+{self.j}j+{self.k}k")
+
+
+TwoV=TwoDVector(2,3)
+ThreeV=ThreeDVector(2,3,4)
+
+TwoV.show()
+ThreeV.show()
